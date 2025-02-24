@@ -5,14 +5,14 @@ import { FaLeaf, FaWater, FaMountain } from "react-icons/fa";
 const About = () => {
   return (
     <div id="about-us" className="container mx-auto px-6 py-30 font-[Poppins]">
-      {/* <motion.h1 
+      <motion.h1 
         className="text-5xl font-bold text-center mb-12 text-blue-700"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
         About Sandaru Aqua Sky
-      </motion.h1> */}
+      </motion.h1>
       
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         <motion.div
