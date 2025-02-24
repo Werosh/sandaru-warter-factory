@@ -101,7 +101,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden absolute top-full w-full bg-white shadow-lg"
+            className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-50" // Added left-0 and z-50
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -113,7 +113,8 @@ const Navbar = () => {
                   key={item.name}
                   href={`#${item.name.toLowerCase().replace(/ /g, "-")}`}
                   className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  // onClick={() => setIsOpen(false)}
+                    onClick={() => setTimeout(() => setIsOpen(false), 900)}
                   whileHover={{ x: 10 }}
                 >
                   <item.icon className="w-5 h-5" />
@@ -132,6 +133,7 @@ const Navbar = () => {
                 <motion.a
                   href="#order"
                   className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
+                  onClick={() => setTimeout(() => setIsOpen(false), 900)}
                   whileHover={{ scale: 1.02 }}
                 >
                   <ShoppingCart className="w-5 h-5" />
